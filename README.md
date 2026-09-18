@@ -1,101 +1,100 @@
-# Portofolio Raka Putra Pratidina
+# Raka Putra Pratidina — Portfolio
 
-Paket source code dan website statis untuk hosting mandiri. Tampilan, sembilan studi kasus, interaksi, foto, CV, dan laporan penelitian sama dengan versi portofolio yang sudah ditampilkan.
+[![Next.js](https://img.shields.io/badge/Next.js-16.3-black?style=flat&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19.2-61DAFB?style=flat&logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue?style=flat&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-4.2-38B2AC?style=flat&logo=tailwind-css)](https://tailwindcss.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Mulai dari sini
+Website portofolio personal yang menampilkan proyek-proyek di bidang **Machine Learning**, **Natural Language Processing (NLP)**, **AI Systems & Agents**, serta **Cloud Infrastructure**.
 
-Ada dua cara menggunakan paket ini:
+🌐 **Live Demo:** [rakaputra.dev](https://rakaputra.dev)
 
-1. **Vercel + GitHub:** gunakan source code di folder utama. Cara ini cocok jika portofolio akan sering diedit.
-2. **Hosting statis:** gunakan seluruh isi folder `out/`. Folder ini sudah berisi hasil build HTML, CSS, JavaScript, foto, dan dokumen.
+---
 
-## A. Deploy ke Vercel melalui GitHub
+## 📌 Featured Work
 
-1. Ekstrak ZIP ini.
-2. Buat repository di GitHub, lalu upload source code sehingga `package.json`, `app/`, `public/`, `package-lock.json`, dan `vercel.json` berada di root repository. Jangan upload file ZIP sebagai pengganti source code.
-3. Di Vercel, pilih **New Project** lalu impor repository tersebut.
-4. Gunakan pengaturan berikut:
+Berikut beberapa proyek dan riset utama yang didokumentasikan di portofolio ini:
 
-| Pengaturan | Nilai |
-| --- | --- |
-| Framework Preset | Next.js |
-| Root Directory | Folder yang berisi `package.json`; biarkan default jika ada di root repo |
-| Node.js Version | 22.x atau versi lebih baru yang didukung |
-| Install Command | `npm ci` |
-| Build Command | `npm run build` |
-| Output Directory | Biarkan default Next.js |
-| Environment Variables | Tidak diperlukan |
+1. **[NutriMood](https://nutrimoodv.vercel.app/)** — *Capstone Project · Coding Camp by DBS Foundation*
+   - Sistem rekomendasi makanan berbasis preferensi mood dan nutrisi harian.
+   - Peran: Team Leader & Machine Learning Engineer.
+   - *Stack: Python, ML Recommendation Systems, Next.js, FastAPI.*
 
-5. Klik **Deploy**. Vercel akan memberikan alamat `.vercel.app` jika deployment berhasil.
+2. **Autonomous Vehicle Sentiment Analysis** — *NLP Research at BRIN (Badan Riset dan Inovasi Nasional)*
+   - Klasifikasi sentimen publik terhadap teknologi kendaraan otonom Level 2 dari diskusi YouTube & Reddit.
+   - Model Bi-LSTM dengan GloVe embeddings (mencapai akurasi pengujian 89.11% dan F1-Score 0.8918).
+   - *Stack: Python, TensorFlow, Bi-LSTM, GloVe, Scikit-learn.*
 
-File `vercel.json` sudah menyimpan pengaturan framework, instalasi, dan build. Folder `node_modules/`, `.next/`, dan `out/` tidak perlu dimasukkan ke GitHub; sudah tercantum dalam `.gitignore`.
+3. **Hybrid Cloud & Resilient Homelab** — *Infrastructure & Systems*
+   - Setup server mandiri berbasis ARM64 (Armbian) yang terhubung dengan Azure VPS menggunakan Cloudflare Tunnels, Docker containerization, dan backup otomatis terenkripsi ke cloud storage.
+   - *Stack: Linux ARM64, Azure, Docker, Cloudflare, Bash, rclone.*
 
-## B. Upload ke hosting statis
+4. **Autonomous Agent Systems** — *AI Systems Exploration*
+   - Eksperimen arsitektur multi-agent (Hermes Agent) untuk automasi monitoring data pasar on-chain dan off-chain menggunakan tool-calling LLM dan persistent SQLite state.
+   - *Stack: Python, Node.js, LLMs, Web3.py, SQLite.*
 
-Upload **seluruh isi** folder `out/` ke root web hosting. Pastikan `index.html`, `_next/`, `images/`, `documents/`, dan `favicon.svg` tetap bersama dengan nama serta susunan folder yang sama. Gunakan root domain atau subdomain, bukan subfolder seperti `/portfolio/`.
+5. **Distributed Data Pipelines** — *Data Engineering*
+   - Pipeline crawling dan ekstraksi data terdistribusi menggunakan Scrapy, Zyte Cloud, dan automasi browser headless.
 
-Untuk mencoba hasil build di komputer dengan Python:
+---
 
-```bash
-cd out
-python -m http.server 3000
+## 🛠️ Tech Stack
+
+- **Frontend & UI:** Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS v4, Radix UI Dialog, Lucide Icons
+- **Machine Learning & Data:** Python, TensorFlow, Scikit-learn, Pandas, NLTK, Bi-LSTM, GloVe
+- **Cloud & DevOps:** Linux (ARM64 / Ubuntu), Docker, Cloudflare Tunnels, Azure, Git, Vercel
+
+---
+
+## 🚀 Menjalankan Secara Lokal
+
+Pastikan Anda sudah menginstal **Node.js (>= 22.13.0)**.
+
+1. **Clone repository:**
+   ```bash
+   git clone https://github.com/Akarptra/portofolio.git
+   cd portofolio
+   ```
+
+2. **Install dependensi:**
+   ```bash
+   npm install
+   ```
+
+3. **Jalankan development server:**
+   ```bash
+   npm run dev
+   ```
+   Buka [http://localhost:3000](http://localhost:3000) di browser Anda.
+
+4. **Build untuk produksi:**
+   ```bash
+   npm run build
+   ```
+   Perintah ini akan melakukan static export ke direktori `out/`.
+
+---
+
+## 📂 Struktur Direktori
+
+```text
+├── app/                  # Next.js App Router (page, layout, style)
+│   ├── globals.css       # Token styling kustom & Tailwind
+│   ├── layout.tsx        # Shell HTML & metadata SEO
+│   ├── page.tsx          # Halaman utama portofolio
+│   └── projects.ts       # Data terstruktur seluruh studi kasus
+├── components/           # Komponen UI (Radix Dialog, Button)
+├── lib/                  # Helper utilities (cn helper)
+├── public/               # File statis (foto profil, screenshot, CV PDF, laporan riset)
+└── out/                  # Hasil static HTML export
 ```
 
-Buka `http://localhost:3000`. Jangan hanya membuka `index.html` dengan klik dua kali, karena aset memakai path dari root website.
+---
 
-## Menjalankan dan mengedit source code
+## 📬 Kontak
 
-Instal Node.js 22.13 atau lebih baru, lalu buka terminal pada folder utama hasil ekstraksi:
-
-```bash
-npm ci
-npm run dev
-```
-
-Buka `http://localhost:3000`.
-
-Sesudah melakukan perubahan:
-
-```bash
-npm run build
-```
-
-Build ini menghasilkan ulang folder `out/`. Jika memakai integrasi GitHub dengan Vercel, push perubahan ke branch deployment agar Vercel membangun ulang website.
-
-## File yang paling sering diedit
-
-| Kebutuhan | File |
-| --- | --- |
-| Isi halaman, pengalaman, email, dan LinkedIn | `app/page.tsx` |
-| Detail sembilan proyek | `app/projects.ts` |
-| Warna, ukuran, font, dan responsivitas | `app/globals.css` |
-| Judul tab dan deskripsi website | `app/layout.tsx` |
-| Foto profil | `public/images/raka.jpg` |
-| Gambar NutriMood | `public/images/nutrimood.png` |
-| CV | `public/documents/raka-putra-cv.pdf` |
-| Laporan BRIN | `public/documents/autonomous-vehicle-research.pdf` |
-| Ikon tab | `public/favicon.svg` |
-
-Pertahankan nama file gambar/PDF saat mengganti isinya, atau sesuaikan path yang mengarah ke file tersebut di source code. Tombol kontak membuka aplikasi email; tidak memerlukan layanan pengiriman email, database, atau API key.
-
-## Menghubungkan rakaputra.dev
-
-Setelah deployment Vercel berhasil, buka **Project → Settings → Domains**, tambahkan `rakaputra.dev`, lalu gunakan record DNS yang ditampilkan Vercel pada penyedia DNS domain. Jika DNS masih dikelola Name.com, pengaturannya ada di **Manage DNS Records**. Tunggu sampai Vercel menandai domain dan SSL aktif. Alamat `.vercel.app` tetap tersedia sebagai alamat alternatif.
-
-## Stack dan verifikasi
-
-- Next.js 16.3.4, React 19.2.6, dan TypeScript.
-- Tailwind CSS, CSS custom, Radix Dialog, dan Lucide icons.
-- Static export melalui `output: "export"` pada `next.config.ts`.
-- Build produksi dan pemeriksaan TypeScript berhasil pada 18 September 2026.
-- Semua referensi aset lokal pada halaman hasil export telah diperiksa.
-- Isi halaman dan stylesheet dibandingkan dengan versi portofolio sebelumnya dan identik.
-- Paket ini belum dideploy ke akun Vercel milikmu.
-
-Source ekspor ini berdiri sendiri dan tidak memerlukan login ChatGPT, konfigurasi Cloudflare Workers, atau kredensial server. ZIP tidak menyertakan dependency terinstal, cache build, credential, maupun arsip proyek asli.
-
-## Referensi
-
-- Next.js static export: https://nextjs.org/docs/app/guides/static-exports
-- Deploy Git repository di Vercel: https://vercel.com/docs/git
-- Domain Vercel: https://vercel.com/docs/domains/working-with-domains
+- **Nama:** Raka Putra Pratidina
+- **Email:** [rakario14@gmail.com](mailto:rakario14@gmail.com)
+- **LinkedIn:** [linkedin.com/in/rakaputrapratidina](https://www.linkedin.com/in/rakaputrapratidina/)
+- **Website:** [rakaputra.dev](https://rakaputra.dev)
