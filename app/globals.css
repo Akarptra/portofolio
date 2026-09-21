@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "../vendor/shadcn-tailwind-4.13.0.css";
+@import "./certifications.css";
 
 :root{--background:#101113;--foreground:#f3f3f3;--card:#18191c;--card-foreground:#f3f3f3;--popover:#18191c;--popover-foreground:#f3f3f3;--primary:#b4a0ff;--primary-foreground:#171220;--secondary:#222327;--secondary-foreground:#f3f3f3;--muted:#222327;--muted-foreground:#a4a5ad;--accent:#b4a0ff;--accent-foreground:#171220;--destructive:#fa8585;--border:#303136;--input:#303136;--ring:#b4a0ff;--radius:.75rem;color-scheme:dark}
 @theme inline{--color-background:var(--background);--color-foreground:var(--foreground);--color-card:var(--card);--color-card-foreground:var(--card-foreground);--color-popover:var(--popover);--color-popover-foreground:var(--popover-foreground);--color-primary:var(--primary);--color-primary-foreground:var(--primary-foreground);--color-secondary:var(--secondary);--color-secondary-foreground:var(--secondary-foreground);--color-muted:var(--muted);--color-muted-foreground:var(--muted-foreground);--color-accent:var(--accent);--color-accent-foreground:var(--accent-foreground);--color-destructive:var(--destructive);--color-border:var(--border);--color-input:var(--input);--color-ring:var(--ring);--radius-lg:var(--radius);--font-sans:Arial,Helvetica,sans-serif;--font-mono:Consolas,monospace}

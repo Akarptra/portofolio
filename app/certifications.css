@@ -1,0 +1,117 @@
+.certification-section {
+  border-top: 1px solid var(--border);
+  padding-top: 78px;
+  padding-bottom: 90px;
+}
+
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.certificate-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 26px;
+  background: #16171a;
+  border: 1px solid #303138;
+  border-radius: 9px;
+}
+
+.certificate-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.certificate-card-top > .mono { color: #a197aa; }
+.certificate-card > .eyebrow { text-transform: uppercase; letter-spacing: .04em; }
+.certificate-card h3 {
+  margin-top: 12px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: -.025em;
+}
+
+.certificate-issuer {
+  color: #a9a1b3;
+  font-size: .875rem;
+  line-height: 1.7;
+  margin-top: 14px;
+  margin-bottom: 26px;
+}
+
+.certificate-card > .text-link {
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid #2a2931;
+}
+
+.course-certificates { margin-top: 48px; }
+.course-certificates-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 25px;
+}
+
+.course-certificates-heading .eyebrow { display: flex; align-items: center; gap: 10px; }
+.course-certificates-heading .eyebrow svg { color: var(--accent); }
+.course-certificates-heading h3 {
+  max-width: 650px;
+  margin-top: 12px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -.025em;
+  line-height: 1.4;
+}
+.course-certificates-heading > .mono { color: #a197aa; white-space: nowrap; padding-bottom: 5px; }
+
+.course-certificate-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 40px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.course-certificate { min-width: 0; padding: 24px 0; border-top: 1px solid #303138; }
+.course-certificate h4 { font-size: 1rem; font-weight: 500; line-height: 1.55; margin: 0; color: #e0dae8; }
+.course-issuer { font-size: .875rem; color: #baadcb; margin-top: 8px; }
+.course-dates, .course-skills { font-size: .75rem; color: #a49baa; line-height: 1.8; margin-top: 9px; }
+.course-dates > span { margin-inline: 3px; }
+.course-skills { margin-top: 4px; }
+.course-credential { display: flex; align-items: flex-start; flex-direction: column; gap: 12px; margin-top: 14px; }
+.course-credential > p { font-size: .75rem; color: #a49baa; line-height: 1.7; }
+.course-credential > p > span { font-family: Consolas, monospace; color: #c1b7ce; overflow-wrap: anywhere; }
+.course-credential > .text-link { font-size: .8125rem; gap: 7px; min-height: 28px; }
+
+@media (max-width: 1100px) {
+  .certificate-card { padding: 22px; }
+  .course-certificate-list { column-gap: 28px; }
+}
+
+@media (max-width: 800px) {
+  .certification-section { padding-block: 65px; }
+  .certificate-grid { grid-template-columns: 1fr; gap: 18px; }
+  .certificate-card { padding: 25px; }
+  .certificate-card-top { margin-bottom: 20px; }
+  .course-certificates-heading { align-items: flex-start; flex-direction: column; gap: 16px; }
+}
+
+@media (max-width: 600px) {
+  .certification-section { padding-block: 57px; }
+  .certificate-card { padding: 24px; }
+  .course-certificates { margin-top: 36px; }
+  .course-certificates-heading h3 { font-size: 1.3rem; }
+  .course-certificate-list { grid-template-columns: 1fr; }
+  .course-credential > .text-link { min-height: 36px; }
+}
