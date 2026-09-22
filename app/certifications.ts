@@ -112,6 +112,3 @@ export const courseCertificates: CourseCertificate[] = [
     expired: true,
   },
 ];
-
-export const dicodingCredentialUrl = (credentialId: string): string =>
-  `https://www.dicoding.com/certificates/${credentialId}`;
