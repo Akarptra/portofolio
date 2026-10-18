@@ -255,7 +255,7 @@ export default function Home() {
             </div>
             <div className="about-copy">
               <p>I’m <strong>Raka Putra Pratidina</strong>, an Informatics Engineering student at Universitas Komputer Indonesia. My work connects applied machine learning, autonomous systems, and scalable full-stack products.</p>
-              <p>I founded <strong>Akar Poros</strong> to engineer autonomous agent flywheels and high-performance digital platforms, built <strong>AlertFlow</strong> for sub-10s creator notifications on Discord, and am currently developing <strong>Akar Poros Finance</strong> (a modern PSAK double-entry accounting engine & ERP). I’ve also conducted NLP sentiment research at BRIN and led food recommendation systems.</p>
+              <p>I founded <strong>Akar Poros</strong> to engineer autonomous agent flywheels and high-performance digital platforms, built <strong>AlertFlow</strong> for sub-10s creator notifications on Discord, and am currently developing <strong>Finance</strong> (a modern PSAK double-entry accounting engine & ERP). I’ve also conducted NLP sentiment research at BRIN and led food recommendation systems.</p>
               <p className="about-closing">I like understanding the whole system.<br/><span>Then making it work, one piece at a time.</span></p>
             </div>
           </div>
